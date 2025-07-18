@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <title>Chatbot Gemini Sederhana</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Chatbot Gemini Sederhana</h2>
+        <form method="post">
+            <input name="prompt" placeholder="Tulis pesan..." autofocus autocomplete="off">
+            <input type="submit" value="Kirim">
+        </form>
+        {% if reply %}
+            <div class="reply">
+                <span class="label">Gemini:</span> {{ reply }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
